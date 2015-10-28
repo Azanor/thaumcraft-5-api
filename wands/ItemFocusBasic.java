@@ -256,16 +256,16 @@ public class ItemFocusBasic extends Item {
 	
 	/**
 	 * This method will be called whenever you right click, and possibly per wand usage tick depending on isVisCostPerTick
-	 * IMPORTANT: It should be noted that vis consumption is now handled by the wand and not the focus so do not subtract any vis there.
+	 * IMPORTANT: It should be noted that vis consumption is now handled by the wand and not the focus so do not subtract any vis here.
 	 * @param wandstack
 	 * @param world
-	 * @param entity - do not assume it will always be a player since it could be used by turrets as well
+	 * @param entity - do not assume it will always be a player since it could be used by other entities as well
 	 * @param movingobjectposition The target
 	 * @param useCount the amount of ticks the item has been used for
-	 * 
+	 * @return did the focus actually activate. Used to determine if vis should be consumed or not. 
 	 */
-	public void onFocusActivation(ItemStack wandstack, World world, EntityLivingBase entity, MovingObjectPosition movingobjectposition, int useCount) {
-	
+	public boolean onFocusActivation(ItemStack wandstack, World world, EntityLivingBase entity, MovingObjectPosition movingobjectposition, int useCount) {
+		return true;
 	}
 	
 	

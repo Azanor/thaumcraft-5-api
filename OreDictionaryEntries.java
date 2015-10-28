@@ -53,12 +53,19 @@ public class OreDictionaryEntries {
 		OreDictionary.registerOre("ingotThaumium", new ItemStack(ItemsTC.ingots,1,0));
 		OreDictionary.registerOre("ingotVoid", new ItemStack(ItemsTC.ingots,1,1));
 		OreDictionary.registerOre("ingotBrass", new ItemStack(ItemsTC.ingots,1,2));
-		OreDictionary.registerOre("gearBrass", new ItemStack(ItemsTC.gear,1,0));
-		OreDictionary.registerOre("plateBrass", new ItemStack(ItemsTC.plate,1,0));
 		
 		OreDictionary.registerOre("blockThaumium", new ItemStack(BlocksTC.metal,1,0));
 		OreDictionary.registerOre("blockVoid", new ItemStack(BlocksTC.metal,1,1));
+		OreDictionary.registerOre("blockBrass", new ItemStack(BlocksTC.metal,1,4));
 		
+		OreDictionary.registerOre("plateIron", new ItemStack(ItemsTC.plate,1,1));
+		OreDictionary.registerOre("gearBrass", new ItemStack(ItemsTC.gear,1,0));
+		OreDictionary.registerOre("plateBrass", new ItemStack(ItemsTC.plate,1,0));
+		OreDictionary.registerOre("gearThaumium", new ItemStack(ItemsTC.gear,1,1));
+		OreDictionary.registerOre("plateThaumium", new ItemStack(ItemsTC.plate,1,2));
+		OreDictionary.registerOre("gearVoid", new ItemStack(ItemsTC.gear,1,2));
+		OreDictionary.registerOre("plateVoid", new ItemStack(ItemsTC.plate,1,3));
+				
 		OreDictionary.registerOre("clusterIron", new ItemStack(ItemsTC.clusters,1,0));
 		OreDictionary.registerOre("clusterGold", new ItemStack(ItemsTC.clusters,1,1));	
 		OreDictionary.registerOre("clusterCopper", new ItemStack(ItemsTC.clusters,1,2));

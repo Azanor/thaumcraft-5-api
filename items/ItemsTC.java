@@ -22,9 +22,9 @@ public class ItemsTC {
 	//resources		
 	public static Item tallow;
 	public static Item fabric;	
-	/** "brass"*/
+	/** "brass","thaumium","void"*/
 	public static Item gear;
-	/** "brass"*/
+	/** "brass","iron","thaumium","void"*/
 	public static Item plate;
 	public static Item voidSeed;	
 	public static Item salisMundus;
@@ -32,9 +32,10 @@ public class ItemsTC {
 	public static Item primalCharm;
 	public static Item phial;
 	public static Item label;
-	public static Item visFilter;
+	public static Item filter;
 	/** "clockwork","biothaumic" */
 	public static Item mind;
+	public static Item morphicResonator;
 	
 	//consumables
 	public static Item alumentum;
@@ -47,7 +48,9 @@ public class ItemsTC {
 	public static Item bottleTaint;
 	public static Item bathSalts;
 	public static Item sanitySoap;
+	/** "basic","focus","magnet"*/
 	public static Item turretPlacer;
+	public static Item golemPlacer;
 	
 	//armor
 	public static Item goggles;
@@ -95,6 +98,7 @@ public class ItemsTC {
 	//tools
 	public static Item thaumometer;
 	public static Item thaumonomicon;
+	public static Item golemBell;
 	public static Item resonator;
 	public static Item sinisterStone;
 	public static Item sanityChecker;
@@ -145,8 +149,7 @@ public class ItemsTC {
 	public static Item focusHole;
 	public static Item focusShard;
 	
-	public static Item focusPouch;
-	
+	public static Item focusPouch;	
 	
 	//baubles
 	/** "amulet_mundane","ring_mundane","girdle_mundane","ring_apprentice"*/
@@ -171,6 +174,11 @@ public class ItemsTC {
 	public static Item eldritchEye;
 	public static Item crimsonRites;	
 	public static Item runedTablet;
+	public static Item creativePlacer;
+	
+	
+	
+	
 	
 	
 	

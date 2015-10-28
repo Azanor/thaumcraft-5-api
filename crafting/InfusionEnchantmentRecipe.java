@@ -13,6 +13,7 @@ import thaumcraft.api.ThaumcraftApiHelper;
 import thaumcraft.api.aspects.AspectList;
 import thaumcraft.api.research.ResearchHelper;
 
+@Deprecated
 public class InfusionEnchantmentRecipe
 {
 	

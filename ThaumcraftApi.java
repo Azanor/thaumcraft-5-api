@@ -11,6 +11,7 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.CraftingManager;
+import net.minecraft.item.crafting.IRecipe;
 import net.minecraftforge.oredict.OreDictionary;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectHelper;
@@ -143,12 +144,40 @@ public class ThaumcraftApi {
     }
 	
 	/**
+	 * @param research the research keys required for this recipe to work. Leave blank if it will work without research
+	 * @param result the recipe output
+	 * @param aspects the vis cost per aspect. 
+	 * @param recipe The recipe. Format is exactly the same as vanilla recipes. Input itemstacks are NBT sensitive.
+	 */
+	public static ShapedArcaneRecipe addArcaneCraftingRecipe(String[] research, ItemStack result, AspectList aspects, Object ... recipe)
+    {
+		ShapedArcaneRecipe r= new ShapedArcaneRecipe(research, result, aspects, recipe);
+        craftingRecipes.add(r);
+        CraftingManager.getInstance().addRecipe(r);
+		return r;
+    }
+	
+	/**
 	 * @param research the research key required for this recipe to work. Leave blank if it will work without research
 	 * @param result the recipe output
 	 * @param aspects the vis cost per aspect
 	 * @param recipe The recipe. Format is exactly the same as vanilla shapeless recipes. Input itemstacks are NBT sensitive.
 	 */
 	public static ShapelessArcaneRecipe addShapelessArcaneCraftingRecipe(String research, ItemStack result, AspectList aspects, Object ... recipe)
+    {
+		ShapelessArcaneRecipe r = new ShapelessArcaneRecipe(research, result, aspects, recipe);
+        craftingRecipes.add(r);
+        CraftingManager.getInstance().addRecipe(r);
+		return r;
+    }
+	
+	/**
+	 * @param research the research keys required for this recipe to work. Leave blank if it will work without research
+	 * @param result the recipe output
+	 * @param aspects the vis cost per aspect
+	 * @param recipe The recipe. Format is exactly the same as vanilla shapeless recipes. Input itemstacks are NBT sensitive.
+	 */
+	public static ShapelessArcaneRecipe addShapelessArcaneCraftingRecipe(String[] research, ItemStack result, AspectList aspects, Object ... recipe)
     {
 		ShapelessArcaneRecipe r = new ShapelessArcaneRecipe(research, result, aspects, recipe);
         craftingRecipes.add(r);
@@ -176,6 +205,25 @@ public class ThaumcraftApi {
     }
 	
 	/**
+	 * @param research the research keys required for this recipe to work. Leave blank if it will work without research
+	 * @param result the recipe output. It can either be an itemstack or an nbt compound tag that will be added to the central item
+	 * @param instability a number that represents the N in 1000 chance for the infusion altar to spawn an
+	 * 		  instability effect each second while the crafting is in progress
+	 * @param aspects the essentia cost per aspect. 
+	 * @param aspects input the central item to be infused. If string is passed it will look up oredictionary entries
+	 * @param recipe An array of items required to craft this. Input itemstacks are NBT sensitive. 
+	 * 				If string is passed it will look up oredictionary entries.
+	 */
+	public static InfusionRecipe addInfusionCraftingRecipe(String[] research, 
+			Object result, int instability, AspectList aspects, Object input, Object[] recipe)
+    {
+		if (!(result instanceof ItemStack || result instanceof Object[])) return null;
+		InfusionRecipe r= new InfusionRecipe(research, result, instability, aspects, input, recipe);
+        craftingRecipes.add(r);
+		return r;
+    }
+	
+	/**
 	 * @param research the research key required for this recipe to work. Leave blank if it will work without research
 	 * @param enchantment the enchantment that will be applied to the item
 	 * @param instability a number that represents the N in 1000 chance for the infusion altar to spawn an
@@ -184,6 +232,7 @@ public class ThaumcraftApi {
 	 * @param recipe An array of items required to craft this. Input itemstacks are NBT sensitive. 
 	 * 				If string is passed it will look up oredictionary entries.
 	 */
+	@Deprecated
 	public static InfusionEnchantmentRecipe addInfusionEnchantmentRecipe(String research, Enchantment enchantment, int instability, AspectList aspects, Object[] recipe)
     {
 		InfusionEnchantmentRecipe r= new InfusionEnchantmentRecipe(research, enchantment, instability, aspects, recipe);
@@ -219,6 +268,7 @@ public class ThaumcraftApi {
     	getCraftingRecipes().add(rc);
 		return rc;
 	}
+    
     
 	
 	/**
@@ -274,6 +324,26 @@ public class ThaumcraftApi {
 						CrucibleRecipe[] crs = (CrucibleRecipe[]) page.recipe;
 						for (CrucibleRecipe cr:crs) {
 							if (cr.getRecipeOutput().isItemEqual(stack)) {
+								keyCache.put(key,new Object[] {ri.key,a});
+								if (ResearchHelper.isResearchComplete(player.getName(), ri.key))
+									return new Object[] {ri.key,a};
+							}
+						}
+					} else
+					if (page.recipe!=null && page.recipe instanceof InfusionRecipe[]) {
+						InfusionRecipe[] crs = (InfusionRecipe[]) page.recipe;
+						for (InfusionRecipe cr:crs) {
+							if (cr.getRecipeOutput() instanceof ItemStack && ((ItemStack) cr.getRecipeOutput()).isItemEqual(stack)) {
+								keyCache.put(key,new Object[] {ri.key,a});
+								if (ResearchHelper.isResearchComplete(player.getName(), ri.key))
+									return new Object[] {ri.key,a};
+							}
+						}
+					} else
+					if (page.recipe!=null && page.recipe instanceof IRecipe[]) {
+						IRecipe[] crs = (IRecipe[]) page.recipe;
+						for (IRecipe cr:crs) {
+							if ( cr.getRecipeOutput().isItemEqual(stack)) {
 								keyCache.put(key,new Object[] {ri.key,a});
 								if (ResearchHelper.isResearchComplete(player.getName(), ri.key))
 									return new Object[] {ri.key,a};
