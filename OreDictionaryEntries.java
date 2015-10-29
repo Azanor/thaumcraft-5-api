@@ -20,9 +20,6 @@ public class OreDictionaryEntries {
 		OreDictionary.registerOre("plankWood", new ItemStack(BlocksTC.plank,1,1));
 		OreDictionary.registerOre("slabWood", new ItemStack(BlocksTC.slabWood,1,0));
 		OreDictionary.registerOre("slabWood", new ItemStack(BlocksTC.slabWood,1,1));
-		OreDictionary.registerOre("slabStone", new ItemStack(BlocksTC.slabStone,1,0));
-		OreDictionary.registerOre("slabStone", new ItemStack(BlocksTC.slabStone,1,1));
-		OreDictionary.registerOre("slabStone", new ItemStack(BlocksTC.slabStone,1,2));
 		OreDictionary.registerOre("treeSapling", new ItemStack(BlocksTC.sapling,1,0));
 		OreDictionary.registerOre("treeSapling", new ItemStack(BlocksTC.sapling,1,1));
 		

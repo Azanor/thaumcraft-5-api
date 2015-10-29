@@ -37,6 +37,13 @@ public class BlocksTC {
 	public static Block lootCrate;
 	public static Block lootUrn;
 	public static Block eldritch;
+	public static Block crystalAir;
+	public static Block crystalFire;
+	public static Block crystalWater;
+	public static Block crystalEarth;
+	public static Block crystalOrder;
+	public static Block crystalEntropy;
+	public static Block crystalTaint;
 	
 	// Doodads	
 	public static Block tableWood;
@@ -50,14 +57,8 @@ public class BlocksTC {
 	public static Block fleshBlock;
 	public static Block banner;
 	public static Block pavingStone;
-	public static Block pillar;
-	public static Block crystalAir;
-	public static Block crystalFire;
-	public static Block crystalWater;
-	public static Block crystalEarth;
-	public static Block crystalOrder;
-	public static Block crystalEntropy;
-	public static Block crystalTaint;
+	public static Block pillar;	
+	public static Block redstoneRelay;
 	
 	// Machines
 	public static Block arcaneEar;
@@ -106,6 +107,7 @@ public class BlocksTC {
 	public static Block effect;
 	public static Block barrier;
 	public static Block placeholder;
+	
 	
 	
 	
