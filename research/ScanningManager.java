@@ -38,5 +38,21 @@ public class ScanningManager {
 			player.addChatMessage(new ChatComponentText("\u00a75\u00a7o"+StatCollector.translateToLocal("tc.unknownobject")));
 		}
 	}
+	
+	/**
+	 * @param player
+	 * @param object
+	 * @return true if the object can be scanned for research the player has not yet discovered
+	 */
+	public static boolean isThingStillScannable(EntityPlayer player, Object object) {		
+		for (IScanThing thing:things) {
+			if (thing.checkThing(player, object)) {				
+				if (!ResearchHelper.isResearchComplete(player.getName(), thing.getResearchKey())) {					
+					return true;
+				}
+			}			
+		}
+		return false;
+	}
 		
 }

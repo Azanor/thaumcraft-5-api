@@ -48,6 +48,7 @@ public class BlocksTC {
 	// Doodads	
 	public static Block tableWood;
 	public static Block tableStone;
+	/** THAUMIUM, VOID, ALCHEMICAL, ADVANCED_ALCHEMICAL, BRASS */
 	public static Block metal;
 	public static Block candle;
 	public static Block nitor;
