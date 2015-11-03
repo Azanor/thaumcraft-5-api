@@ -1,8 +1,6 @@
 package thaumcraft.api.blocks;
 
-import thaumcraft.common.blocks.devices.BlockJar;
 import net.minecraft.block.Block;
-import net.minecraft.block.state.IBlockState;
 
 public class BlocksTC {
 
@@ -81,6 +79,7 @@ public class BlocksTC {
 	public static Block smelterThaumium;
 	public static Block smelterVoid;
 	public static Block smelterAux;
+	public static Block smelterVent;
 	public static Block alembic;
 	public static Block infusionMatrix;
 	public static Block infernalFurnace;

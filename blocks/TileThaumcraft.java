@@ -9,7 +9,6 @@ import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.BlockPos;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.world.World;
-import thaumcraft.common.lib.utils.BlockStateUtils;
 
 /**
  * 
@@ -70,7 +69,7 @@ public class TileThaumcraft extends TileEntity {
 	
 	public EnumFacing getFacing() {
 		try {
-			return BlockStateUtils.getFacing(getBlockMetadata());
+			return EnumFacing.getFront(getBlockMetadata() & 7);
 		} catch (Exception e) {	}
 		return EnumFacing.UP;
 	}
