@@ -1,8 +1,5 @@
 package thaumcraft.api.items;
 
-import thaumcraft.api.wands.WandCap;
-import thaumcraft.api.wands.WandRod;
-import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 
 public class ItemsTC {
@@ -50,7 +47,7 @@ public class ItemsTC {
 	public static Item sanitySoap;
 	/** "basic","focus","magnet"*/
 	public static Item turretPlacer;
-	public static Item golemPlacer;
+	
 	
 	//armor
 	public static Item goggles;
@@ -97,8 +94,7 @@ public class ItemsTC {
 	
 	//tools
 	public static Item thaumometer;
-	public static Item thaumonomicon;
-	public static Item golemBell;
+	public static Item thaumonomicon;	
 	public static Item resonator;
 	public static Item sinisterStone;
 	public static Item sanityChecker;
@@ -176,16 +172,12 @@ public class ItemsTC {
 	public static Item runedTablet;
 	public static Item creativePlacer;
 	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
+	//golems
+	public static Item golemBell;
+	public static Item golemPlacer;
+	/** "blank","pickup","fill","fill_advanced","empty","empty_advanced" */
+	public static Item seals;
+		
 	
 	
 	
