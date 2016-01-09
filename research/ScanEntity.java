@@ -39,7 +39,7 @@ public class ScanEntity implements IScanThing {
 				NBTTagCompound tc = new NBTTagCompound();
 				((Entity)obj).writeToNBT(tc);
 				for (EntityTagsNBT nbt:NBTData) {
-					if (!tc.hasKey(nbt.name) || !ThaumcraftApiHelper.getNBTDataFromId(tc, tc.getTagType(nbt.name), nbt.name).equals(nbt.value)) {
+					if (!tc.hasKey(nbt.name) || !ThaumcraftApiHelper.getNBTDataFromId(tc, tc.getTagId(nbt.name), nbt.name).equals(nbt.value)) {
 						return false;
 					} 					
 				} 			

@@ -90,7 +90,7 @@ public class AspectHelper {
 					entity.writeToNBT(tc);
 					for (EntityTagsNBT nbt:et.nbts) {
 						if (tc.hasKey(nbt.name)) {
-							if (!ThaumcraftApiHelper.getNBTDataFromId(tc, tc.getTagType(nbt.name), nbt.name).equals(nbt.value)) continue f1; 
+							if (!ThaumcraftApiHelper.getNBTDataFromId(tc, tc.getTagId(nbt.name), nbt.name).equals(nbt.value)) continue f1; 
 						} else {
 							continue f1;
 						}
