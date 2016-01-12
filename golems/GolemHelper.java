@@ -26,6 +26,10 @@ public class GolemHelper {
 	public static ISeal getSeal(String key) {
 		return ThaumcraftApi.internalMethods.getSeal(key);
 	}
+	
+	public static ItemStack getSealStack(String key) {
+		return ThaumcraftApi.internalMethods.getSealStack(key);
+	}
 
 	public static ISealEntity getSealEntity(int dim, SealPos pos) {
 		return ThaumcraftApi.internalMethods.getSealEntity(dim, pos);

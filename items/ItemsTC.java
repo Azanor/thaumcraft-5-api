@@ -178,7 +178,10 @@ public class ItemsTC {
 	//golems
 	public static Item golemBell;
 	public static Item golemPlacer;
-	/** "blank","pickup","fill","fill_advanced","empty","empty_advanced", "harvest", "pickup_advanced" */
+	/** 
+	 * damage 0 = blank seal
+	 * use GolemHelper.getSealStack to return an itemstack of a specific seal 
+	 * **/
 	public static Item seals;
 	
 	

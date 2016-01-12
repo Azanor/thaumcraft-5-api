@@ -35,5 +35,6 @@ public interface IInternalMethodHandler {
 	public ISealEntity getSealEntity(int dim, SealPos pos);
 	public void addGolemTask(int dim, Task task);
 	public boolean shouldPreserveAura(World world, EntityPlayer player, BlockPos pos, Aspect aspect);
+	public ItemStack getSealStack(String key);
 	
 }

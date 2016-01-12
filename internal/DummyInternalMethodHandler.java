@@ -124,5 +124,11 @@ public class DummyInternalMethodHandler implements IInternalMethodHandler {
 		// TODO Auto-generated method stub
 		return false;
 	}
+
+	@Override
+	public ItemStack getSealStack(String key) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 }
