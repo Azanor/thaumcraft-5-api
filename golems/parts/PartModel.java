@@ -66,6 +66,33 @@ public class PartModel {
 	public void postRenderObjectPart(String partName, IGolemAPI golem, float partialTicks, EnumLimbSide side) {
 		
 	}
+	
+	/**
+	 * This method will be called just before arms are rendered to calculate the base rotation for the entire group of parts.
+	 * @param partName the obj model part name
+	 * @param inputRot is the base default calculated rotation for this group of parts. Return it as-is if you do not wish to alter it.
+	 */
+	public float preRenderArmRotationX(IGolemAPI golem, float partialTicks, EnumLimbSide side, float inputRot) {
+		return inputRot;
+	}
+	
+	/**
+	 * This method will be called just before arms are rendered to calculate the base rotation for the entire group of parts.
+	 * @param partName the obj model part name
+	 * @param inputRot is the base default calculated rotation for this group of parts. Return it as-is if you do not wish to alter it.
+	 */
+	public float preRenderArmRotationY(IGolemAPI golem, float partialTicks, EnumLimbSide side, float inputRot) {
+		return inputRot;
+	}
+	
+	/**
+	 * This method will be called just before arms are rendered to calculate the base rotation for the entire group of parts.
+	 * @param partName the obj model part name
+	 * @param inputRot is the base default calculated rotation for this group of parts. Return it as-is if you do not wish to alter it.
+	 */
+	public float preRenderArmRotationZ(IGolemAPI golem, float partialTicks, EnumLimbSide side, float inputRot) {
+		return inputRot;
+	}
 
 	public enum EnumLimbSide {
 		LEFT,RIGHT,MIDDLE;

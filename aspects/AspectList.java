@@ -60,8 +60,7 @@ public class AspectList implements Serializable {
 	 * @return an array of all the aspects in this collection
 	 */
 	public Aspect[] getAspects() {
-		Aspect[] q = new Aspect[1];
-		return aspects.keySet().toArray(q);
+		return aspects.keySet().toArray(new Aspect[]{});
 	}
 	
 		
@@ -96,7 +95,7 @@ public class AspectList implements Serializable {
 	 */
 	public Aspect[] getAspectsSortedByAmount() {
 		try {
-			Aspect[] out = aspects.keySet().toArray(new Aspect[1]);
+			Aspect[] out = aspects.keySet().toArray(new Aspect[]{});
 			boolean change=false;
 			do {
 				change=false;

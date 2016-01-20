@@ -35,7 +35,16 @@ public class ProvisionRequest {
         else
         {
         	ProvisionRequest pr = (ProvisionRequest)p_equals_1_;
-            return !this.seal.getSealPos().equals(pr.getSeal().getSealPos()) ? false : this.stack.getIsItemStackEqual(pr.getStack());
+            return !this.seal.getSealPos().equals(pr.getSeal().getSealPos()) ? false : isItemStackEqual(this.stack, pr.getStack());
         }
+    }
+	
+	private boolean isItemStackEqual(ItemStack first, ItemStack other)
+    {
+        return first.stackSize != other.stackSize ? false : 
+        	(first.getItem() != other.getItem() ? false : 
+        		(first.getItemDamage() != other.getItemDamage() ? false : 
+        			(first.getTagCompound() == null && other.getTagCompound() != null ? false : 
+        				first.getTagCompound() == null || first.getTagCompound().equals(other.getTagCompound()))));
     }
 }

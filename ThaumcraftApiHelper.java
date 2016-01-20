@@ -61,6 +61,8 @@ public class ThaumcraftApiHelper {
 		if (stack0!=null && in==null) return false;
 		if (stack0==null && in==null) return true;
 		
+		if (in instanceof Object[]) return true;
+		
 		if (in instanceof String) {
 			List<ItemStack> l = OreDictionary.getOres((String) in);
 			return containsMatch(false, new ItemStack[]{stack0}, l);

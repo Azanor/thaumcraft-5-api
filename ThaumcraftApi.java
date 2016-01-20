@@ -13,6 +13,7 @@ import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.item.crafting.IRecipe;
+import net.minecraft.nbt.NBTTagInt;
 import net.minecraftforge.oredict.OreDictionary;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectHelper;
@@ -189,6 +190,7 @@ public class ThaumcraftApi {
 	/**
 	 * @param research the research key required for this recipe to work. Leave blank if it will work without research
 	 * @param result the recipe output. It can either be an itemstack or an nbt compound tag that will be added to the central item
+	 * 		If nbt it needs to be in the format Object[] {"nbttagname", NBT Tag Object}  eg. new Object[] { "mask", new NBTTagInt(1) }
 	 * @param instability a number that represents the N in 1000 chance for the infusion altar to spawn an
 	 * 		  instability effect each second while the crafting is in progress
 	 * @param aspects the essentia cost per aspect. 
@@ -208,6 +210,7 @@ public class ThaumcraftApi {
 	/**
 	 * @param research the research keys required for this recipe to work. Leave blank if it will work without research
 	 * @param result the recipe output. It can either be an itemstack or an nbt compound tag that will be added to the central item
+	 * 		If nbt it needs to be in the format Object[] {"nbttagname", NBT Tag Object}  eg. new Object[] { "mask", new NBTTagInt(1) }
 	 * @param instability a number that represents the N in 1000 chance for the infusion altar to spawn an
 	 * 		  instability effect each second while the crafting is in progress
 	 * @param aspects the essentia cost per aspect. 

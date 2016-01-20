@@ -58,6 +58,6 @@ public interface IGolemAPI {
 	 */
 	public void swingArm();
 	
-	
+	public boolean isInCombat();
 	
 }

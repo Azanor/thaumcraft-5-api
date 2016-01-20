@@ -22,7 +22,7 @@ public class Task {
 	private boolean completed;
 	private int data; 
 	/**
-	 * Lifespan in seconds. Default 120 seconds
+	 * Lifespan in seconds. Default 300 seconds
 	 */
 	private short lifespan;
 	private byte priority=0;
@@ -65,7 +65,7 @@ public class Task {
 
 	public void setCompletion(boolean fulfilled) {
 		this.completed = fulfilled;
-		this.lifespan += 60;
+		this.lifespan += 120;
 	}
 
 	public UUID getGolemUUID() {
@@ -98,7 +98,7 @@ public class Task {
 
 	public void setReserved(boolean res) {
 		this.reserved = res;
-		this.lifespan += 60;
+		this.lifespan += 120;
 	}
 
 	public boolean isSuspended() {

@@ -11,7 +11,7 @@ import net.minecraft.world.World;
 public interface IArchitect {
 
 	/**
-	 * Returns a list of blocks that should be highlighted in world.
+	 * Returns a list of blocks that should be highlighted in world. The starting point is whichever block the player currently has highlighted in the world.
 	 */
 	public ArrayList<BlockPos> getArchitectBlocks(ItemStack stack, World world, 
 			BlockPos pos, EnumFacing side, EntityPlayer player);
