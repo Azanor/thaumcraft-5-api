@@ -13,6 +13,13 @@ public class OreDictionaryEntries {
 	public static void initializeOreDictionary() {
 		OreDictionary.registerOre("oreAmber", new ItemStack(BlocksTC.oreAmber));
 		OreDictionary.registerOre("oreCinnabar", new ItemStack(BlocksTC.oreCinnabar));
+		OreDictionary.registerOre("oreCrystalAir", new ItemStack(BlocksTC.crystalAir,1,OreDictionary.WILDCARD_VALUE));
+		OreDictionary.registerOre("oreCrystalEarth", new ItemStack(BlocksTC.crystalEarth,1,OreDictionary.WILDCARD_VALUE));
+		OreDictionary.registerOre("oreCrystalWater", new ItemStack(BlocksTC.crystalWater,1,OreDictionary.WILDCARD_VALUE));
+		OreDictionary.registerOre("oreCrystalFire", new ItemStack(BlocksTC.crystalFire,1,OreDictionary.WILDCARD_VALUE));
+		OreDictionary.registerOre("oreCrystalOrder", new ItemStack(BlocksTC.crystalOrder,1,OreDictionary.WILDCARD_VALUE));
+		OreDictionary.registerOre("oreCrystalEntropy", new ItemStack(BlocksTC.crystalEntropy,1,OreDictionary.WILDCARD_VALUE));
+		OreDictionary.registerOre("oreCrystalTaint", new ItemStack(BlocksTC.crystalTaint,1,OreDictionary.WILDCARD_VALUE));
 		
 		OreDictionary.registerOre("logWood", new ItemStack(BlocksTC.log,1,0));
 		OreDictionary.registerOre("logWood", new ItemStack(BlocksTC.log,1,3));

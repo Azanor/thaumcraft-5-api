@@ -45,7 +45,7 @@ public class GolemHelper {
 		if (!provisionRequests.containsKey(world.provider.getDimensionId()))
 			provisionRequests.put(world.provider.getDimensionId(), new ArrayList<ProvisionRequest>());
 		ArrayList<ProvisionRequest> list = provisionRequests.get(world.provider.getDimensionId());
-		ProvisionRequest pr = new ProvisionRequest(seal,stack);
+		ProvisionRequest pr = new ProvisionRequest(seal,stack.copy());
 		if (!list.contains(pr))
 			list.add(pr);
 	}
