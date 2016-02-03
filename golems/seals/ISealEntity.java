@@ -33,5 +33,9 @@ public interface ISealEntity {
 	String getOwner();
 
 	void setOwner(String owner);
+	
+	public byte getColor();
+
+	public void setColor(byte color);
 
 }

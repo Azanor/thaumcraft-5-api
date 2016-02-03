@@ -137,6 +137,7 @@ public class Task {
 	public boolean canGolemPerformTask(IGolemAPI golem) {
 		ISealEntity se = GolemHelper.getSealEntity(golem.getGolemWorld().provider.getDimensionId(), this.sealPos);
 		if (se!=null) {
+			if (golem.getGolemColor()>0 && se.getColor()>0 && golem.getGolemColor() != se.getColor()) return false;
 			return se.getSeal().canGolemPerformTask(golem,this);
 		} else {
 			return true;

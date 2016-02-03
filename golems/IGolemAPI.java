@@ -51,7 +51,7 @@ public interface IGolemAPI {
 	 */
 	public void addRankXp(int xp);
 
-	
+	public byte getGolemColor();
 	
 	/**
 	 * Plays arm swinging animated for attacks and such
