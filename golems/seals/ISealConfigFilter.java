@@ -15,4 +15,7 @@ public interface ISealConfigFilter {
 	public boolean isBlacklist();
 	
 	public void setBlacklist(boolean black);
+	
+	public boolean hasStacksizeLimiters();
+	
 }

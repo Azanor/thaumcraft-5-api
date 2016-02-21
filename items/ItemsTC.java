@@ -13,7 +13,7 @@ public class ItemsTC {
 	public static Item ingots; 
 	/**"iron","copper","tin","silver","lead","quicksilver","thaumium","void","brass"*/
 	public static Item nuggets; 
-	/**"iron","gold","copper","tin","silver","lead","cinnabar"*/
+	/**"iron","gold","copper","tin","silver","lead","cinnabar","thaumium","void","brass"*/
 	public static Item clusters; 
 	
 	//resources		

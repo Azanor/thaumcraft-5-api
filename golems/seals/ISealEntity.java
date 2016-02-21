@@ -29,6 +29,10 @@ public interface ISealEntity {
 	boolean isLocked();
 
 	void setLocked(boolean locked);
+	
+	public boolean isRedstoneSensitive();
+
+	public void setRedstoneSensitive(boolean redstone);
 
 	String getOwner();
 
@@ -37,5 +41,7 @@ public interface ISealEntity {
 	public byte getColor();
 
 	public void setColor(byte color);
+
+	public boolean isStoppedByRedstone(World world);
 
 }
