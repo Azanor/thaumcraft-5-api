@@ -7,19 +7,16 @@ import java.util.List;
 import java.util.concurrent.ConcurrentHashMap;
 
 import net.minecraft.block.Block;
-import net.minecraft.enchantment.Enchantment;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.CraftingManager;
 import net.minecraft.item.crafting.IRecipe;
-import net.minecraft.nbt.NBTTagInt;
 import net.minecraftforge.oredict.OreDictionary;
 import thaumcraft.api.aspects.Aspect;
 import thaumcraft.api.aspects.AspectHelper;
 import thaumcraft.api.aspects.AspectList;
 import thaumcraft.api.crafting.CrucibleRecipe;
-import thaumcraft.api.crafting.InfusionEnchantmentRecipe;
 import thaumcraft.api.crafting.InfusionRecipe;
 import thaumcraft.api.crafting.ShapedArcaneRecipe;
 import thaumcraft.api.crafting.ShapelessArcaneRecipe;
@@ -236,13 +233,13 @@ public class ThaumcraftApi {
 	 * @param recipe An array of items required to craft this. Input itemstacks are NBT sensitive. 
 	 * 				If string is passed it will look up oredictionary entries.
 	 */
-	@Deprecated
-	public static InfusionEnchantmentRecipe addInfusionEnchantmentRecipe(String research, Enchantment enchantment, int instability, AspectList aspects, Object[] recipe)
-    {
-		InfusionEnchantmentRecipe r= new InfusionEnchantmentRecipe(research, enchantment, instability, aspects, recipe);
-        craftingRecipes.add(r);
-		return r;
-    }
+//	@Deprecated
+//	public static InfusionEnchantmentRecipe addInfusionEnchantmentRecipe(String research, Enchantment enchantment, int instability, AspectList aspects, Object[] recipe)
+//    {
+//		InfusionEnchantmentRecipe r= new InfusionEnchantmentRecipe(research, enchantment, instability, aspects, recipe);
+//        craftingRecipes.add(r);
+//		return r;
+//    }
 	
 	/**
 	 * @param stack the recipe result

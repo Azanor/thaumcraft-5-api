@@ -10,7 +10,6 @@ import net.minecraft.util.StatCollector;
 import thaumcraft.api.aspects.AspectList;
 import thaumcraft.api.crafting.CrucibleRecipe;
 import thaumcraft.api.crafting.IArcaneRecipe;
-import thaumcraft.api.crafting.InfusionEnchantmentRecipe;
 import thaumcraft.api.crafting.InfusionRecipe;
 
 public class ResearchPage {
@@ -24,7 +23,7 @@ public class ResearchPage {
         NORMAL_CRAFTING,
         INFUSION_CRAFTING,
         COMPOUND_CRAFTING,
-        INFUSION_ENCHANTMENT,
+//        INFUSION_ENCHANTMENT,
         SMELTING
     }
 	
@@ -137,10 +136,10 @@ public class ResearchPage {
 	/**
 	 * @param recipe an infusion crafting recipe.
 	 */
-	public ResearchPage(InfusionEnchantmentRecipe recipe) {
-		this.type = PageType.INFUSION_ENCHANTMENT;
-		this.recipe = recipe;
-	}
+//	public ResearchPage(InfusionEnchantmentRecipe recipe) {
+//		this.type = PageType.INFUSION_ENCHANTMENT;
+//		this.recipe = recipe;
+//	}
 	
 	/**
 	 * @param image

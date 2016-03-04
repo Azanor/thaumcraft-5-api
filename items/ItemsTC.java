@@ -159,6 +159,7 @@ public class ItemsTC {
 	public static Item girdleRunic;	
 	public static Item amuletVis;	
 	public static Item girdleHover;
+	public static Item ringVerdant;
 	
 	//misc
 	/** "slime","tendril"*/
@@ -176,6 +177,7 @@ public class ItemsTC {
 	public static Item runedTablet;
 	public static Item creativePlacer;
 	public static Item creativeFluxSponge;
+	public static Item jarBrace;
 	
 	//golems
 	public static Item golemBell;
@@ -185,6 +187,8 @@ public class ItemsTC {
 	 * use GolemHelper.getSealStack to return an itemstack of a specific seal 
 	 * **/
 	public static Item seals;
+	
+	
 	
 	
 	

@@ -18,4 +18,5 @@ public class ItemRunic extends Item implements IRunicArmor  {
 		return charge;
 	}
 	
+	
 }

@@ -28,8 +28,18 @@ public interface IRechargable {
 	 * @param amount how much vis to recharge - modified by things like the node tapper research
 	 * @return the last aspect that was recharged
 	 */
+	@Deprecated
 	public Aspect handleRecharge(World world, ItemStack is, BlockPos pos, EntityPlayer player, int amount);
 	
+	@Deprecated
 	public AspectList getAspectsInChargable(ItemStack is);
+	
+	/**
+	 * @param is
+	 * @return the amount of charge in this item expressed as a float (0f - 1f)
+	 * returning -1 will prevent this items charge from being displayed in the hud
+	 */
+	@Deprecated
+	public float getChargeLevel(ItemStack is);
 	
 }

@@ -21,7 +21,8 @@ public enum EnumGolemTrait {
 	FIREPROOF(new ResourceLocation("thaumcraft","textures/misc/golem/tag_fireproof.png")),
 	BREAKER(new ResourceLocation("thaumcraft","textures/misc/golem/tag_breaker.png")),
 	HAULER(new ResourceLocation("thaumcraft","textures/misc/golem/tag_hauler.png")),
-	RANGED(new ResourceLocation("thaumcraft","textures/misc/golem/tag_ranged.png"));
+	RANGED(new ResourceLocation("thaumcraft","textures/misc/golem/tag_ranged.png")),
+	BLASTPROOF(new ResourceLocation("thaumcraft","textures/misc/golem/tag_blastproof.png"));
 	
 	static {
 		CLUMSY.opposite = DEFT;

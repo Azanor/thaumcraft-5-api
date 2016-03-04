@@ -42,6 +42,7 @@ public class BlocksTC {
 	public static Block crystalOrder;
 	public static Block crystalEntropy;
 	public static Block crystalTaint;
+	public static Block grassAmbient;
 	
 	// Doodads	
 	public static Block tableWood;
@@ -111,6 +112,7 @@ public class BlocksTC {
 	public static Block effect;
 	public static Block barrier;
 	public static Block placeholder;
+	
 	
 	
 	
