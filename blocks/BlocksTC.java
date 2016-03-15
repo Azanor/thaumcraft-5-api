@@ -100,6 +100,7 @@ public class BlocksTC {
 	public static Block nodeStabilizer;
 	public static Block essentiaTransportInput;
 	public static Block essentiaTransportOutput;
+	public static Block patternCrafter;
 	
 	// Fluids
 	public static Block fluxGoo;	
@@ -112,6 +113,7 @@ public class BlocksTC {
 	public static Block effect;
 	public static Block barrier;
 	public static Block placeholder;
+	
 	
 	
 	

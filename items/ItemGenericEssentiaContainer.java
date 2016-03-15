@@ -26,7 +26,7 @@ public class ItemGenericEssentiaContainer extends Item implements IEssentiaConta
         this.setMaxDamage(0);
     }	
 	
-	int base = 1;
+	protected int base = 1;
 	
 	@SideOnly(Side.CLIENT)
     @Override
