@@ -65,7 +65,7 @@ public class Task {
 
 	public void setCompletion(boolean fulfilled) {
 		this.completed = fulfilled;
-		this.lifespan += 120;
+		this.lifespan += 1;
 	}
 
 	public UUID getGolemUUID() {
