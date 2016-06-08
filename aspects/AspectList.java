@@ -44,6 +44,13 @@ public class AspectList implements Serializable {
 	}
 	
 	/**
+	 * @return whether or not this list is empty
+	 */
+	public boolean isEmpty() {
+		return size() == 0;
+	}
+	
+	/**
 	 * @return the amount of total vis in this collection
 	 */
 	public int visSize() {
